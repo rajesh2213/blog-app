@@ -1,0 +1,85 @@
+    .expandableContainer {
+        margin: 1rem 0;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .expandableButton {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .expandableButton:hover {
+        background: #ffffff36;
+    }
+
+    .expandableIcon {
+        transition: transform 0.3s ease;
+    }
+
+    .expandableContent {
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+        padding:0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .expanded {
+        opacity: 1;
+        padding: 1rem;
+        transform: translateY(0);
+        animation: expandAnimation .5s ease-in-out forwards;
+    }
+
+    .collapsing {
+        animation: collapseAnimation 0.5s ease-out;
+    }
+
+
+    @keyframes expandAnimation {
+
+        0% {
+            opacity: 0;
+            transform: translateY(-80%);
+            padding: 0;
+        }
+
+        50% {
+            opacity: .7;
+            transform: translateY(10%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            /* padding: 20px; */
+        }
+    }
+
+    @keyframes collapseAnimation {
+
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+            padding: 20px;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-10px);
+            padding: 0;
+        }
+    }

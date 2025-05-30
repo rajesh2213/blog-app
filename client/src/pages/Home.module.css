@@ -1,0 +1,24 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1920px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.postSection {
+    width: 100%;
+}
+
+.postContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
